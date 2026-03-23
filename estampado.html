@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Roboto', sans-serif; color: #333; background: #fff; }
+body { font-family: 'Roboto', sans-serif; color: #333; background: #f5f5f5; }
 a { text-decoration: none; color: inherit; }
 
 /* NAVBAR */
@@ -27,21 +27,9 @@ a { text-decoration: none; color: inherit; }
   gap: 12px;
   color: #fff;
 }
-.navbar-brand img {
-  height: 60px;
-}
-.navbar-brand .brand-text h1 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-  color: #fff;
-}
-.navbar-brand .brand-text p {
-  font-size: 13px;
-  font-weight: 300;
-  margin: 0;
-  color: #fff;
-}
+.navbar-brand img { height: 60px; }
+.navbar-brand .brand-text h1 { font-size: 18px; font-weight: 700; color: #fff; }
+.navbar-brand .brand-text p { font-size: 13px; font-weight: 300; color: #fff; }
 .navbar-toggle {
   background: none;
   border: 1px solid rgba(255,255,255,0.3);
@@ -55,17 +43,13 @@ a { text-decoration: none; color: inherit; }
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   background: #092039;
   z-index: 100;
   padding: 10px 15px;
 }
 .navbar-menu.active { display: block; }
-.navbar-menu ul {
-  list-style: none;
-  padding: 0;
-}
+.navbar-menu ul { list-style: none; padding: 0; }
 .navbar-menu ul li a {
   color: #fff;
   display: flex;
@@ -75,151 +59,297 @@ a { text-decoration: none; color: inherit; }
   font-size: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.navbar-menu ul li a .material-icons { font-size: 18px; }
 
-/* TOP BAR (red line) */
-.top-bar {
-  height: 5px;
-  background: linear-gradient(to right, #0033A0 33%, #fff 33%, #fff 66%, #D52B1E 66%);
+/* BREADCRUMB */
+.breadcrumb-bar {
+  background: #fff;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
 }
+.breadcrumb-bar a {
+  color: #666;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.breadcrumb-bar a .material-icons { font-size: 16px; }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main-content {
   max-width: 960px;
   margin: 0 auto;
-  padding: 30px 15px;
-}
-.main-content h2 {
-  font-size: 26px;
-  font-weight: 500;
-  color: #09132E;
-  margin-bottom: 25px;
-}
-.section-title {
-  font-size: 26px;
-  font-weight: 500;
-  color: #09132E;
-  margin-bottom: 24px;
+  padding: 30px 15px 40px;
 }
 
-/* CATEGORY CARDS */
-.categories-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.category-card {
+/* FORM */
+.form-container {
   background: #fff;
-  border: none;
   border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 1px 1px 4px 0px #ccc;
+  padding: 30px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
-.category-card-body {
-  display: flex;
-  align-items: flex-start;
-  padding: 25px 20px;
-  gap: 15px;
-}
-.category-icon {
-  width: 75px;
-  height: 75px;
-  flex-shrink: 0;
-}
-.category-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.category-info h3 {
-  font-size: 18px;
-  font-weight: 700;
+.form-container h2 {
+  font-size: 26px;
+  font-weight: 300;
   color: #333;
-  margin-bottom: 8px;
-}
-.category-info p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-}
-.category-link {
-  display: block;
-  color: #fff;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: 400;
-  transition: opacity 0.2s;
-  border-radius: 0 0 3px 3px;
-}
-.category-link:hover { opacity: 0.9; }
-.cat-pt .category-link { background: rgb(133,158,107); }
-.cat-rt .category-link { background: rgb(225,117,95); }
-.cat-rd .category-link { background: rgb(46,92,127); }
-.cat-nac .category-link { background: rgb(72,184,192); }
-.cat-ref .category-link { background: rgb(226,172,27); }
-.cat-vd .category-link { background: rgb(110,132,143); }
-
-/* DESTACADOS SECTION */
-.destacados-section {
-  margin-top: 40px;
-}
-.destacado-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-top: 3px solid #0053AB;
-  border-radius: 4px;
-  overflow: hidden;
-  padding: 25px 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.destacado-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.destacado-card h3 .material-icons {
-  color: #0053AB;
-  font-size: 28px;
-}
-.destacado-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
   margin-bottom: 15px;
 }
-.destacado-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.form-help {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
-.destacado-links a {
+.form-help a {
+  color: #0053AB;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 6px;
+}
+.form-group input {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 0.8px solid #CED4DA;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.2s;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #0053AB;
+  box-shadow: 0 0 0 2px rgba(0,83,171,0.15);
+}
+.form-group input.error {
+  border-color: #EB1414;
+}
+.error-text {
+  color: #EB1414;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+.error-text.visible { display: block; }
+
+.btn-submit {
+  background: #EB1414;
+  color: #fff;
+  border: 1px solid #EB1414;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.2s;
+}
+.btn-submit:hover { background: #d41212; }
+.btn-submit:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* LOADING OVERLAY */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading-overlay.active { display: flex; }
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #092039;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* RESULT */
+.result-container {
+  display: none;
+}
+.result-container.active {
+  display: block;
+}
+.result-header {
+  margin-bottom: 20px;
+}
+.result-header h2 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 15px;
+}
+.result-header hr {
+  border: none;
+  border-top: 1px solid rgba(9,19,46,0.1);
+}
+
+/* FOUND result */
+.result-found {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+.result-found .valid-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #d4edda;
+  color: #155724;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+}
+.result-found .valid-badge .material-icons {
+  font-size: 20px;
+}
+.result-data {
+  margin-bottom: 20px;
+}
+.result-data table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.result-data table td {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+.result-data table td:first-child {
+  font-weight: 500;
+  color: #555;
+  width: 200px;
+}
+.result-data table td:last-child {
+  color: #333;
+}
+.result-pdf-viewer {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* NOT FOUND result */
+.result-not-found h2 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #333;
+}
+
+/* Action buttons row (Volver / Siguiente style) */
+.result-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: #0053AB;
-}
-.destacado-links a .material-icons { font-size: 18px; }
-.destacado-links a.red-link { color: #EB1414; }
-.destacado-links a.red-link .material-icons { color: #EB1414; }
-
-.destacado-card .more-info {
-  color: #0053AB;
-  font-size: 14px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.destacado-card .ir-tramite {
-  color: #EB1414;
-  font-size: 14px;
-  display: block;
-  padding-top: 10px;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 15px;
   border-top: 1px solid #eee;
+}
+.btn-volver {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 12px;
+}
+.btn-volver:hover { color: #333; }
+.btn-siguiente-red {
+  background: #EB1414;
+  color: #fff;
+  border: 1px solid #EB1414;
+  padding: 6px 16px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+.btn-siguiente-red:hover { background: #d41212; }
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+}
+.modal-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-box h3 button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+}
+.modal-box p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.modal-box img {
+  max-width: 100%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.modal-close-btn {
+  background: #6E848F;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -229,83 +359,26 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
   padding: 50px 15px 30px;
 }
-.footer-logo {
-  margin-bottom: 5px;
-}
-.footer-logo img {
-  height: 70px;
-  opacity: 0.9;
-}
-.footer-org {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 3px;
-}
-.footer-gov {
-  font-size: 13px;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-.footer-flag {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-.footer-flag img {
-  height: 14px;
-  width: 200px;
-}
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-.footer-links li {
-  margin-bottom: 8px;
-}
-.footer-links li a {
-  color: #fff;
-  font-size: 14px;
-  text-decoration: underline;
-  font-weight: 300;
-}
-.footer-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-.footer-social a img {
-  height: 28px;
-  width: 28px;
-  filter: brightness(0) invert(1);
-}
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-}
-.footer-bottom img {
-  height: 24px;
-  filter: brightness(0) invert(1);
-}
-.footer-bottom span {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
-.footer-bottom span b {
-  font-weight: 700;
-}
+.footer-logo { margin-bottom: 5px; }
+.footer-logo img { height: 70px; opacity: 0.9; }
+.footer-org { font-size: 14px; font-weight: 300; margin-bottom: 3px; }
+.footer-gov { font-size: 13px; font-weight: 300; margin-bottom: 15px; }
+.footer-flag { display: flex; justify-content: center; margin-bottom: 30px; }
+.footer-flag img { height: 14px; width: 200px; }
+.footer-links { list-style: none; padding: 0; margin-bottom: 30px; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links li a { color: #fff; font-size: 14px; text-decoration: underline; font-weight: 300; }
+.footer-social { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px; }
+.footer-social a img { height: 28px; width: 28px; filter: brightness(0) invert(1); }
+.footer-bottom { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px; }
+.footer-bottom img { height: 24px; filter: brightness(0) invert(1); }
+.footer-bottom span { font-size: 18px; font-weight: 300; }
+.footer-bottom span b { font-weight: 700; }
 
 @media (min-width: 768px) {
   .navbar-brand .brand-text h1 { font-size: 22px; }
-  .navbar-brand .brand-text p { font-size: 14px; }
-  .main-content { padding: 40px 30px; }
-  .main-content h2 { font-size: 32px; }
+  .form-container { padding: 40px 30px; }
+  .form-container h2 { font-size: 30px; }
 }
 </style>
 </head>
@@ -330,124 +403,56 @@ a { text-decoration: none; color: inherit; }
   </div>
 </nav>
 
-<!-- MAIN CONTENT -->
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <a href="index.html"><span class="material-icons">home</span> Inicio</a>
+</div>
+
+<!-- MAIN -->
 <div class="main-content">
-  <h2>Trámites disponibles</h2>
-  <hr style="border: none; border-top: 1px solid rgba(9,19,46,0.1); margin-bottom: 25px;">
+  <div class="form-container">
+    <h2>Verificación de Estampado Electrónico</h2>
+    <p class="form-help">
+      Ingrese los datos del estampado electrónico a validar. 
+      <a onclick="document.getElementById('helpModal').classList.add('active')">¿Donde encuentro los números?</a>
+    </p>
 
-  <h3 class="section-title">Categorías</h3>
-
-  <div class="categories-grid">
-
-    <!-- Permanencia Transitoria -->
-    <div class="category-card cat-pt">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-PT.gif" alt="Permanencia Transitoria">
-        </div>
-        <div class="category-info">
-          <h3>Permanencia Transitoria</h3>
-          <p>Para personas que visitan Chile por tiempo acotado y sin intención de establecerse en el país. Ejemplo: turistas, negocios, otros.</p>
-        </div>
+    <div id="formSection">
+      <div class="form-group">
+        <label>Código de Verificación (*)</label>
+        <input type="text" id="codigoVerificacion" placeholder="">
+        <p class="error-text" id="errorCodigo">Este campo es obligatorio</p>
       </div>
-      <a href="#" class="category-link">Listado de trámites →</a>
+      <div class="form-group">
+        <label>Número de Estampado Electrónico (EE) (*)</label>
+        <input type="text" id="numeroEstampado" placeholder="">
+        <p class="error-text" id="errorEstampado">Este campo es obligatorio</p>
+      </div>
+      <button class="btn-submit" id="btnSiguiente" onclick="validarEstampado()">Siguiente</button>
     </div>
 
-    <!-- Residencia Temporal -->
-    <div class="category-card cat-rt">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-RT.gif" alt="Residencia Temporal">
-        </div>
-        <div class="category-info">
-          <h3>Residencia Temporal</h3>
-          <p>Para personas extranjeras que tienen el propósito de establecerse en Chile hasta por 2 años.</p>
-        </div>
-      </div>
-      <a href="#" class="category-link">Listado de trámites →</a>
-    </div>
-
-    <!-- Residencia Definitiva -->
-    <div class="category-card cat-rd">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-RD.gif" alt="Residencia Definitiva">
-        </div>
-        <div class="category-info">
-          <h3>Residencia Definitiva</h3>
-          <p>Para personas con Residencia Temporal vigente, que desean radicarse por tiempo indefinido en Chile.</p>
-        </div>
-      </div>
-      <a href="#" class="category-link">Listado de trámites →</a>
-    </div>
-
-    <!-- Nacionalidad -->
-    <div class="category-card cat-nac">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-NAC.gif" alt="Nacionalidad">
-        </div>
-        <div class="category-info">
-          <h3>Nacionalidad</h3>
-          <p>Para personas que buscan adquirir la nacionalidad chilena u otros trámites relacionados.</p>
-        </div>
-      </div>
-      <a href="#" class="category-link">Listado de trámites →</a>
-    </div>
-
-    <!-- Refugio -->
-    <div class="category-card cat-ref">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-REF.gif" alt="Refugio">
-        </div>
-        <div class="category-info">
-          <h3>Refugio</h3>
-          <p>Prórroga de residencia temporal para personas solicitantes de refugio, cuyo caso está en proceso de análisis.</p>
-        </div>
-      </div>
-      <a href="#" class="category-link">Listado de trámites →</a>
-    </div>
-
-    <!-- Verificación de documentos -->
-    <div class="category-card cat-vd">
-      <div class="category-card-body">
-        <div class="category-icon">
-          <img src="https://tramites.extranjeria.gob.cl/img/icon/ico-VD.gif" alt="Verificación de documentos">
-        </div>
-        <div class="category-info">
-          <h3>Verificación de documentos</h3>
-          <p>Aquí podrás verificar: Estampado Electrónico, certificado de Permanencia Definitiva digital y Firma Electrónica Avanzada.</p>
-        </div>
-      </div>
-      <a href="verificacion.html" class="category-link">Listado de trámites →</a>
-    </div>
-
+    <div id="resultSection" class="result-container"></div>
   </div>
+</div>
 
-  <!-- DESTACADOS -->
-  <div class="destacados-section">
-    <h3 class="section-title">Destacados</h3>
-
-    <!-- Consulta estado -->
-    <div class="destacado-card">
-      <h3><span class="material-icons">search</span> Consulta estado de trámite</h3>
-      <p>Para conocer la etapa en que se encuentra una solicitud de Residencia Temporal, Definitiva o Nacionalidad.</p>
-      <div class="destacado-links">
-        <a href="#"><span class="material-icons">vpn_key</span> Iniciar con ClaveÚnica →</a>
-        <a href="#" class="red-link"><span class="material-icons">person</span> Iniciar sesión →</a>
-      </div>
-    </div>
-
-    <!-- Declaración de infracción -->
-    <div class="destacado-card">
-      <h3><span class="material-icons">calculate</span> Declaración de infracción y cálculo de multa</h3>
-      <p>Permite a las personas que han cometido alguna infracción migratoria, calcular su multa y enviar documentos para sus descargos.</p>
-      <a href="#" class="more-info">Más información</a>
-      <a href="#" class="ir-tramite">Ir al trámite→</a>
-    </div>
+<!-- HELP MODAL -->
+<div id="helpModal" class="modal-overlay" onclick="if(event.target===this) this.classList.remove('active')">
+  <div class="modal-box">
+    <h3>
+      Ayuda: Estampado Electrónico
+      <button onclick="document.getElementById('helpModal').classList.remove('active')">×</button>
+    </h3>
+    <p>Los números a ingresar se presentan en la siguiente imagen:</p>
+    <img src="https://www.extranjeria.gob.cl/media/2020/09/Estampado-Electr%C3%B3nico.png" alt="Ejemplo Estampado Electrónico">
+    <br>
+    <button class="modal-close-btn" onclick="document.getElementById('helpModal').classList.remove('active')">Close</button>
   </div>
+</div>
 
+<!-- LOADING -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="spinner"></div>
+  <p class="loading-text">Consultando estampado electrónico...</p>
 </div>
 
 <!-- FOOTER -->
@@ -479,6 +484,166 @@ a { text-decoration: none; color: inherit; }
     <span>servicio<b>migraciones</b>.cl</span>
   </div>
 </footer>
+
+<script>
+// ===== MAKE WEBHOOK INTEGRATION =====
+const WEBHOOK_URL = 'https://hook.us2.make.com/iq6ps3txx1jaxr91mje7sx47ynbta3kb';
+
+function validarEstampado() {
+  const codigo = document.getElementById('codigoVerificacion').value.trim();
+  const estampado = document.getElementById('numeroEstampado').value.trim();
+  
+  // Reset errors
+  document.getElementById('errorCodigo').classList.remove('visible');
+  document.getElementById('errorEstampado').classList.remove('visible');
+  document.getElementById('codigoVerificacion').classList.remove('error');
+  document.getElementById('numeroEstampado').classList.remove('error');
+  
+  let hasError = false;
+  
+  if (!codigo) {
+    document.getElementById('errorCodigo').classList.add('visible');
+    document.getElementById('codigoVerificacion').classList.add('error');
+    hasError = true;
+  }
+  if (!estampado) {
+    document.getElementById('errorEstampado').classList.add('visible');
+    document.getElementById('numeroEstampado').classList.add('error');
+    hasError = true;
+  }
+  
+  if (hasError) return;
+  
+  // Show loading
+  document.getElementById('loadingOverlay').classList.add('active');
+  document.getElementById('btnSiguiente').disabled = true;
+  
+  // Send to Make webhook
+  const payload = {
+    entity: 'extranjeria',
+    uuid: codigo,
+    numero_estampado: estampado
+  };
+  
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('loadingOverlay').classList.remove('active');
+    document.getElementById('btnSiguiente').disabled = false;
+    
+    // Hide form, show result
+    document.getElementById('formSection').style.display = 'none';
+    document.querySelector('.form-help').style.display = 'none';
+    document.querySelector('.form-container h2').style.display = 'none';
+    
+    const resultSection = document.getElementById('resultSection');
+    resultSection.classList.add('active');
+    
+    if (data.found) {
+      // === FOUND: Show validation result like original site ===
+      let html = '<div class="result-header">';
+      html += '<h2>Verificación de Estampado Electrónico</h2>';
+      html += '<hr>';
+      html += '</div>';
+      
+      html += '<div class="result-found">';
+      html += '<div class="valid-badge"><span class="material-icons">check_circle</span> Estampado Electrónico vigente</div>';
+      
+      html += '<div class="result-data"><table>';
+      if (data.name) {
+        html += '<tr><td>Titular</td><td>' + data.name + '</td></tr>';
+      }
+      html += '<tr><td>N° Estampado Electrónico</td><td>' + estampado + '</td></tr>';
+      html += '<tr><td>Código de Verificación</td><td>' + codigo + '</td></tr>';
+      html += '<tr><td>Estado</td><td><strong style="color:#155724;">Vigente</strong></td></tr>';
+      html += '</table></div>';
+      
+      if (data.pdf) {
+        // Convert base64 to blob and show PDF viewer
+        try {
+          const byteCharacters = atob(data.pdf);
+          const byteNumbers = new Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+          }
+          const byteArray = new Uint8Array(byteNumbers);
+          const blob = new Blob([byteArray], { type: 'application/pdf' });
+          const pdfUrl = URL.createObjectURL(blob);
+          
+          html += '<iframe class="result-pdf-viewer" src="' + pdfUrl + '"></iframe>';
+        } catch(e) {
+          console.error('Error rendering PDF:', e);
+        }
+      }
+      
+      html += '</div>';
+      
+      // Action buttons like original
+      html += '<div class="result-actions">';
+      html += '<button class="btn-volver" onclick="nuevaConsulta()">Volver</button>';
+      html += '<button class="btn-siguiente-red" onclick="nuevaConsulta()">Nueva consulta</button>';
+      html += '</div>';
+      
+      resultSection.innerHTML = html;
+      
+    } else {
+      // === NOT FOUND: Replicate original "Estampado Electrónico no encontrado" ===
+      let html = '<div class="result-not-found">';
+      html += '<h2>Estampado Electrónico no encontrado</h2>';
+      html += '</div>';
+      html += '<div class="result-actions">';
+      html += '<button class="btn-volver" onclick="nuevaConsulta()">Volver</button>';
+      html += '<button class="btn-siguiente-red" onclick="nuevaConsulta()">Siguiente</button>';
+      html += '</div>';
+      
+      resultSection.innerHTML = html;
+    }
+  })
+  .catch(error => {
+    document.getElementById('loadingOverlay').classList.remove('active');
+    document.getElementById('btnSiguiente').disabled = false;
+    
+    // Hide form, show error
+    document.getElementById('formSection').style.display = 'none';
+    document.querySelector('.form-help').style.display = 'none';
+    document.querySelector('.form-container h2').style.display = 'none';
+    
+    const resultSection = document.getElementById('resultSection');
+    resultSection.classList.add('active');
+    resultSection.innerHTML = '<div class="result-not-found">' +
+      '<h2>Error de conexión</h2>' +
+      '<p style="font-size:14px;color:#555;margin-top:10px;">No se pudo conectar con el servidor de verificación. Por favor intente más tarde.</p>' +
+      '</div>' +
+      '<div class="result-actions">' +
+      '<button class="btn-volver" onclick="nuevaConsulta()">Volver</button>' +
+      '<button class="btn-siguiente-red" onclick="nuevaConsulta()">Intentar nuevamente</button>' +
+      '</div>';
+  });
+}
+
+function nuevaConsulta() {
+  // Show form again, hide result
+  document.getElementById('formSection').style.display = '';
+  document.querySelector('.form-help').style.display = '';
+  document.querySelector('.form-container h2').style.display = '';
+  document.getElementById('codigoVerificacion').value = '';
+  document.getElementById('numeroEstampado').value = '';
+  const resultSection = document.getElementById('resultSection');
+  resultSection.classList.remove('active');
+  resultSection.innerHTML = '';
+}
+
+// Allow Enter key to submit
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    validarEstampado();
+  }
+});
+</script>
 
 </body>
 </html>
